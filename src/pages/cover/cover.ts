@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams } from 'ionic-angular';
-
 /**
  * Generated class for the CoverPage page.
  *
@@ -13,8 +12,8 @@ import {NavController, NavParams } from 'ionic-angular';
   templateUrl: 'cover.html',
 })
 export class CoverPage {
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
