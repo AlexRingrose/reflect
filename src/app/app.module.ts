@@ -10,6 +10,8 @@ import { CoverPage } from '../pages/cover/cover';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { ShareService } from '../services/share/share';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -31,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    ShareService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
