@@ -3,6 +3,7 @@ import {NavController, NavParams } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 import { HomePage } from '../../pages/home/home';
+import { ShareService } from '../../services/share/share';
 
 @Component({
   selector: 'page-cover',
@@ -10,7 +11,9 @@ import { HomePage } from '../../pages/home/home';
 })
 export class CoverPage {
   validations_form: FormGroup;
-  constructor(public navCtrl: NavController,public formBuilder: FormBuilder) {}
+  constructor(public navCtrl: NavController,public formBuilder: FormBuilder,public navParams: NavParams, shareServ: ShareService) {
+    this.tempServ = shareServ;
+  }
 
     ionViewWillLoad(){
       this.validations_form = this.formBuilder.group({
@@ -34,7 +37,9 @@ export class CoverPage {
     }
 
   onSubmit(values){
-    console.log(values)
+    console.log(values.name)
+    console.log(values.id)
+    this.tempServ.setCover(values)
     //this.navCtrl.push(HomePage);
   }
 
