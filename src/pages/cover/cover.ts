@@ -10,7 +10,7 @@ import { HomePage } from '../../pages/home/home';
 })
 export class CoverPage {
   validations_form: FormGroup;
-  constructor(public navCtrl: NavController,public formBuilder: FormBuilder) {}
+  constructor(public navCtrl: NavController,public formBuilder: FormBuilder,public navParams: NavParams) {}
 
     ionViewWillLoad(){
       this.validations_form = this.formBuilder.group({
