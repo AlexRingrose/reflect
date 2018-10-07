@@ -6,14 +6,14 @@ export class ShareService {
   //id: {};
 
   constructor() {
-    this.name = 'blank';
+    this.cover = 'blank';
   }
 
-  setName(name){
-    this.name = name;
+  setCover(cover){
+    this.cover = cover;
   }
 
-  getName(){
-    return this.name;
+  getCover(){
+    return this.cover;
   }
 }
