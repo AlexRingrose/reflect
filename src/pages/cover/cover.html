@@ -15,17 +15,30 @@
 
 
 <ion-content padding>
-  <ion-list>
+  <form class="form" [formGroup]="validations_form"
+    (ngSubmit)="onSubmit(validations_form.value)">
     <ion-item>
       <ion-label color="primary" stacked>Name</ion-label>
-      <ion-input type="text" placeholder="Name Input"></ion-input>
+      <ion-input type="text" formControlName="name"></ion-input>
     </ion-item>
+
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.name">
+        <div class="error-message" *ngIf="validations_form.get('name').hasError(
+        validation.type) && (validations_form.get('name').dirty ||
+        validations_form.get('name').touched)">
+          {{ validation_messages.message }}
+        </div>
+      </ng-container>
+    </div>
 
     <ion-item>
       <ion-label color="primary" stacked>MSU ID</ion-label>
-      <ion-input type="text" placeholder="ID Input"></ion-input>
+      <ion-input type="text" formControlName="id"></ion-input>
     </ion-item>
-  </ion-list>
+    <button ion-button full type="submit"
+    [disabled]="!validations_form.valid">Submit</button>
+  </form>
   <!--
   <ion-list>
     <ion-label floating>Name</ion-label>
