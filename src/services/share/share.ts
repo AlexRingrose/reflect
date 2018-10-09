@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ShareService {
-  name: string;
-  //id: {};
-
+  cover;
   constructor() {
     this.cover = 'blank';
   }
