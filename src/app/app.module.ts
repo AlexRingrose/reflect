@@ -11,6 +11,8 @@ import { PreviewPage } from '../pages/preview/preview'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { File } from '@ionic-native/file';
+import { FileOpener } from '@ionic-native/file-opener';
 import { ShareService } from '../services/share/share';
 
 @NgModule({
@@ -37,7 +39,9 @@ import { ShareService } from '../services/share/share';
     StatusBar,
     SplashScreen,
     ShareService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    File,
+    FileOpener
   ]
 })
 export class AppModule {}

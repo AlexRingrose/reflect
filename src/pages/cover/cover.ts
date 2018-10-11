@@ -10,6 +10,7 @@ import { ShareService } from '../../services/share/share';
 })
 export class CoverPage {
   validations_form: FormGroup;
+  tempServ;
   constructor(public navCtrl: NavController,public formBuilder: FormBuilder,public navParams: NavParams, shareServ: ShareService) {
     this.tempServ = shareServ;
   }
