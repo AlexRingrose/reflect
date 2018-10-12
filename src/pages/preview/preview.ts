@@ -1,19 +1,24 @@
 import { Component } from '@angular/core';
-import {NavController} from 'ionic-angular';
+import { NavController, Platform} from 'ionic-angular';
 
 import { ShareService } from '../../services/share/share';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
+import { File } from '@ionic-native/file';
+import { FileOpener } from '@ionic-native/file-opener';
+
 @Component({
   selector: 'page-preview',
   templateUrl: 'preview.html',
 })
 export class PreviewPage {
-  serviceData: string;
+  serviceData;
 
-  constructor(public navCtrl: NavController, shareServ: ShareService)
+  constructor(public navCtrl: NavController, shareServ: ShareService,
+    private plt: Platform, private file: File,
+    private fileOpener: FileOpener)
   {
     // DIABLED FOR TESTING!
     //this.serviceData = shareServ.getCover();
@@ -26,7 +31,7 @@ export class PreviewPage {
     }
   }
   pdfObj = null;
-  ionViewDidLoad(){
+  ionViewWillLoad(){
     this.createPdf();
   }
 
@@ -62,8 +67,22 @@ export class PreviewPage {
   }
 
   downloadPdf(){
+    if (this.plt.is('cordova')) {
+      this.pdfObj.getBuffer((buffer) => {
+        var blob = new Blob([buffer], { type: 'application/pdf' });
 
+        // Save the PDF to the data Directory of our App
+        this.file.writeFile(this.file.dataDirectory, 'portfolio.pdf',
+        blob, { replace: true }).then(fileEntry => {
+          // Open the PDf with the correct OS tools
+          this.fileOpener.open(this.file.dataDirectory + 'portfolio.pdf',
+          'application/pdf');
+        })
+      });
+    } else {
+      // On a browser simply use download!
     this.pdfObj.download();
+    }
   }
 
   ionViewDidLoad(){
