@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Platform} from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 import { ShareService } from '../../services/share/share';
 import pdfMake from 'pdfmake/build/pdfmake';
@@ -19,13 +19,14 @@ export class PreviewPage {
     //this.serviceData = shareServ.getCover();
 
     //TEST DATA
-    this.serviceData = {name: "Bob Howard", id: "66615666",
-     advisor: "Dr. Angleton", graduation: "spring NEVER",
-     degree: "BS", concentrations: "demonology",
-     minor: "spy stuff"
+    this.serviceData = {name: "John Smith", id: "82273042",
+     advisor: "Dr. Ringrose", graduation: "spring 2020",
+     degree: "BA", concentrations: "GIS",
+     minor: "Math"
     }
   }
   pdfObj = null;
+
   ionViewWillLoad(){
     this.createPdf();
   }
