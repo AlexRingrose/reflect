@@ -1,0 +1,72 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cover</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form class="form" [formGroup]="validations_form"
+    (ngSubmit)="onSubmit(validations_form.value)">
+    <!-- Name field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Name</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <!-- Name vailidation -->
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.name">
+        <div class="error-message" *ngIf="validations_form.get('name').hasError(
+        validation.type) && (validations_form.get('name').dirty ||
+        validations_form.get('name').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <!-- ID field -->
+    <ion-item>
+      <ion-label color="primary" stacked>MSU ID</ion-label>
+      <ion-input type="text" formControlName="id"></ion-input>
+    </ion-item>
+
+    <!-- Advisor field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Advisor</ion-label>
+      <ion-input type="text" formControlName="advisor"></ion-input>
+    </ion-item>
+
+    <!-- Graduation field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Graduation</ion-label>
+      <ion-input type="text" formControlName="graduation"></ion-input>
+    </ion-item>
+
+    <!-- Degree field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Degree</ion-label>
+      <ion-input type="text" formControlName="degree"></ion-input>
+    </ion-item>
+
+    <!-- Minor field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Minor</ion-label>
+      <ion-input type="text" formControlName="minor"></ion-input>
+    </ion-item>
+
+    <!-- Concentrations field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Concentrations</ion-label>
+      <ion-input type="text" formControlName="concentrations"></ion-input>
+    </ion-item>
+
+
+
+    <button ion-button full type="submit"
+    [disabled]="!validations_form.valid">Submit</button>
+  </form>
+
+</ion-content>
