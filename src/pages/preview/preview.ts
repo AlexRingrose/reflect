@@ -10,6 +10,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
   selector: 'page-preview',
   templateUrl: 'preview.html',
 })
+
 export class PreviewPage {
   serviceData;
 
@@ -25,7 +26,10 @@ export class PreviewPage {
      minor: "Math"
     }
   }
+
   pdfObj = null;
+  pdfGen = null;
+  pdfSrc = null;
 
   ionViewWillLoad(){
     this.createPdf();
@@ -41,8 +45,26 @@ export class PreviewPage {
           {text: this.serviceData.name, style:'body'}
         ] },
         {text:[
-          {text: 'ID : ', bold: true}, this.serviceData.id
+          {text: 'ID : ', style: 'itemName'},
+          {text: this.serviceData.id, style:'body'}
         ] },
+        {text:[
+          {text: 'Advisor : ', style: 'itemName'},
+          {text: this.serviceData.advisor, style:'body'}
+        ] },
+        {text:[
+          {text: 'Degree : ', style: 'itemName'},
+          {text: this.serviceData.degree, style:'body'}
+        ] },
+        {text:[
+          {text: 'Minor : ', style: 'itemName'},
+          {text: this.serviceData.minor, style:'body'}
+        ] },
+        {text:[
+          {text: 'Concentration(s) : ', style: 'itemName'},
+          {text: this.serviceData.concentrations, style:'body'}
+        ] },
+
 
       ],
       styles:{
@@ -59,11 +81,22 @@ export class PreviewPage {
         }
       }
     }
-    this.pdfObj = pdfMake.createPdf(docDefinition);
+    this.pdfGen = pdfMake.createPdf(docDefinition);
+    this.pdfGen.getBlob((blob)=>{
+      this.pdfObj = blob;
+      this.pdfSrc = URL.createObjectURL(this.pdfObj);
+      console.log(blob)
+      console.log(this.pdfSrc)
+    });
   }
 
+
+
   downloadPdf(){
-    this.pdfObj.download();
+    this.pdfGen.download();
+  }
+  openPdf(){
+    this.pdfGen.open({},window);
   }
 
   ionViewDidLoad(){
