@@ -14,7 +14,7 @@ export class CoverPage {
   constructor(public navCtrl: NavController,public formBuilder: FormBuilder,public navParams: NavParams, shareServ: ShareService) {
     this.tempServ = shareServ;
   }
-
+    //Add selector tool for these: advisor, graduation, degree
     ionViewWillLoad(){
       this.validations_form = this.formBuilder.group({
         name: new FormControl('', Validators.required),
@@ -23,7 +23,12 @@ export class CoverPage {
         graduation: new FormControl('',),
         degree: new FormControl('',),
         minor: new FormControl('',),
-        concentrations: new FormControl('',)
+        concentrations: new FormControl('',),
+        email: new FormControl('',),
+        address: new FormControl('',),
+        cellNum: new FormControl('',),
+        altNum: new FormControl('',),
+        longAddress: new FormControl('',)
       })
     }
 

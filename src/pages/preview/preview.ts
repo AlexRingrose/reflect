@@ -23,7 +23,9 @@ export class PreviewPage {
     this.serviceData = {name: "John Smith", id: "82273042",
      advisor: "Dr. Ringrose", graduation: "spring 2020",
      degree: "BA", concentrations: "GIS",
-     minor: "Math"
+     minor: "Math", email: "john@gmail.com", address : "293 8th St Apt 2",
+     cellNum : "858-532-8873", altNum : "858-934-6629",
+     longAddress : "7023 17th St"
     }
   }
 
@@ -53,6 +55,10 @@ export class PreviewPage {
           {text: this.serviceData.advisor, style:'body'}
         ] },
         {text:[
+          {text: 'Graduation : ', style: 'itemName'},
+          {text: this.serviceData.graduation, style:'body'}
+        ] },
+        {text:[
           {text: 'Degree : ', style: 'itemName'},
           {text: this.serviceData.degree, style:'body'}
         ] },
@@ -63,6 +69,26 @@ export class PreviewPage {
         {text:[
           {text: 'Concentration(s) : ', style: 'itemName'},
           {text: this.serviceData.concentrations, style:'body'}
+        ] },
+        {text:[
+          {text: 'Email : ', style: 'itemName'},
+          {text: this.serviceData.email, style:'body'}
+        ] },
+        {text:[
+          {text: 'Address : ', style: 'itemName'},
+          {text: this.serviceData.address, style:'body'}
+        ] },
+        {text:[
+          {text: 'Cell Number : ', style: 'itemName'},
+          {text: this.serviceData.cellNum, style:'body'}
+        ] },
+        {text:[
+          {text: 'Alt Number : ', style: 'itemName'},
+          {text: this.serviceData.altNum, style:'body'}
+        ] },
+        {text:[
+          {text: 'Long Term Address : ', style: 'itemName'},
+          {text: this.serviceData.longAddress, style:'body'}
         ] },
 
 
