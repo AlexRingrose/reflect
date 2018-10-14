@@ -8,5 +8,82 @@
 </ion-header>
 
 <ion-content padding>
-  
+  <form class="form" [formGroup]="papers_form"
+    (ngSubmit)="onSubmit(papers_form.value)">
+        <!-- ID field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Course</ion-label>
+      <ion-input type="text" formControlName="course1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Paper</ion-label>
+      <ion-input type="text" formControlName="paper1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Course</ion-label>
+      <ion-input type="text" formControlName="course2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Paper</ion-label>
+      <ion-input type="text" formControlName="paper2"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Course</ion-label>
+      <ion-input type="text" formControlName="course3"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Paper</ion-label>
+      <ion-input type="text" formControlName="paper3"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Course</ion-label>
+      <ion-input type="text" formControlName="course4"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Paper</ion-label>
+      <ion-input type="text" formControlName="paper4"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Course</ion-label>
+      <ion-input type="text" formControlName="course5"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Paper</ion-label>
+      <ion-input type="text" formControlName="paper5"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Course</ion-label>
+      <ion-input type="text" formControlName="course6"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Paper</ion-label>
+      <ion-input type="text" formControlName="paper6"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Course</ion-label>
+      <ion-input type="text" formControlName="course7"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Paper</ion-label>
+      <ion-input type="text" formControlName="paper7"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Course</ion-label>
+      <ion-input type="text" formControlName="course8"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Paper</ion-label>
+      <ion-input type="text" formControlName="paper8"></ion-input>
+    </ion-item>
+
+    <button ion-button full type="submit"
+    [disabled]="!papers_form.valid">Submit</button>
+  </form>
 </ion-content>
