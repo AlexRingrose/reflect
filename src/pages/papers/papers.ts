@@ -11,14 +11,9 @@ import { ShareService } from '../../services/share/share';
 })
 
 export class PapersPage{
-  papers_form: FormGroup;
-  tempServ;
-  constructor(public navCtrl: NavController,public formBuilder: FormBuilder,
-    public navParams: NavParams, shareServ: ShareService){
-    this.tempServ = shareServ;
-  }
+  public courseList = [];
   //Ideally seperate this into .txt and import or somthing
-  courselist = ['401 Historiography', '499 Special Topics',
+  public courseAry = ['401 Historiography', '499 Special Topics',
   '497 Internship', '494 Independent Study', '491 Seminar',
   '460 Modern France Francophone World', '442 Crusades',
   '440 Comparative Slavery Americas',  '435 Latin America Seminar',
@@ -34,6 +29,19 @@ export class PapersPage{
   '319 Colonial America', '315 American Women', '299 Special Topics',
   '261 American Indian History', '251 Public History', '220 North Dakota',
   'not listed'];
+
+  papers_form: FormGroup;
+  tempServ;
+  constructor(public navCtrl: NavController,public formBuilder: FormBuilder,
+    public navParams: NavParams, shareServ: ShareService)
+  {
+    this.courseList
+    for(let i=0;i<this.courseAry.length;i++){
+      this.courseList.push(this.courseAry[i])
+        // ,values:this.courseAry[i].substr(0,3)})
+    }
+    this.tempServ = shareServ;
+  }
 
   ionViewWillLoad(){
     this.papers_form = this.formBuilder.group({

@@ -8,6 +8,15 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-item>
+   <ion-label>Courses</ion-label>
+    <ion-select [(ngModel)]="course1">
+      <ion-option *ngFor="let item of courseList">
+        {{item}}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+
   <form class="form" [formGroup]="papers_form"
     (ngSubmit)="onSubmit(papers_form.value)">
         <!-- ID field -->
@@ -19,6 +28,12 @@
       <ion-label color="primary" stacked>Paper</ion-label>
       <ion-input type="text" formControlName="paper1"></ion-input>
     </ion-item>
+
+
+
+
+
+
 
     <ion-item>
       <ion-label color="primary" stacked>Course</ion-label>
