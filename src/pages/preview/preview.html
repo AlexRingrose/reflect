@@ -5,13 +5,21 @@
     </button>
     <ion-title>Preview</ion-title>
   </ion-navbar>
+  <script type="application/javascript">
+    function resizeIFrameToFitContent( iFrame ) {
+      iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+      iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+    }
+    window.addEventListener('DOMContentLoaded', function(e) {
+      var iFrame = document.getElementById( 'iFrame1' );
+      resizeIFrameToFitContent( iFrame );
+    }
+  </script>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-img src={{this.pdfSrc}} width=200 height= 400></ion-img>
-  </ion-list>
-  <button ion-button full (click)="downloadPdf()">Download PDF</button>
-  <button ion-button full (click)="openPdf()">Open PDF</button>
+    <iframe id="pdfFrame" *ngIf='pdfSrc' [src]='pdfSrc'></iframe>
 
+  <button ion-button full (click)="downloadPdf()">Download PDF</button>
+  <!-- <button ion-button full (click)="openPdf()">Open PDF</button> -->
 </ion-content>

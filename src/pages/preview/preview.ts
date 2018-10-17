@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import { ShareService } from '../../services/share/share';
 import pdfMake from 'pdfmake/build/pdfmake';
@@ -14,7 +15,8 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export class PreviewPage {
   serviceData;
 
-  constructor(public navCtrl: NavController, shareServ: ShareService)
+  constructor(public navCtrl: NavController, shareServ: ShareService,
+    public _sanitizer: DomSanitizer)
   {
     // DIABLED FOR TESTING!
     //this.serviceData = shareServ.getCover();
@@ -110,7 +112,8 @@ export class PreviewPage {
     this.pdfGen = pdfMake.createPdf(docDefinition);
     this.pdfGen.getBlob((blob)=>{
       this.pdfObj = blob;
-      this.pdfSrc = URL.createObjectURL(this.pdfObj);
+      this.pdfSrc = this._sanitizer.bypassSecurityTrustResourceUrl
+      (window.URL.createObjectURL(this.pdfObj))
       console.log(blob)
       console.log(this.pdfSrc)
     });
@@ -121,9 +124,9 @@ export class PreviewPage {
   downloadPdf(){
     this.pdfGen.download();
   }
-  openPdf(){
-    this.pdfGen.open({},window);
-  }
+  // openPdf(){
+  //   this.pdfGen.open({},window);
+  // }
 
   ionViewDidLoad(){
     console.log('ionViewDidLoad PreviewPage')
