@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
+
+import { SimplePdfViewerComponent } from  'simple-pdf-viewer';
 
 import { ShareService } from '../../services/share/share';
 import pdfMake from 'pdfmake/build/pdfmake';
@@ -13,6 +15,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 })
 
 export class PreviewPage {
+  @ViewChild(SimplePdfViewerComponent) private pdfViewer: SimplePdfViewerComponent;
   serviceData;
 
   constructor(public navCtrl: NavController, shareServ: ShareService,
@@ -110,23 +113,28 @@ export class PreviewPage {
       }
     }
     this.pdfGen = pdfMake.createPdf(docDefinition);
-    this.pdfGen.getBlob((blob)=>{
-      this.pdfObj = blob;
-      this.pdfSrc = this._sanitizer.bypassSecurityTrustResourceUrl
-      (window.URL.createObjectURL(this.pdfObj))
-      console.log(blob)
-      console.log(this.pdfSrc)
-    });
+    this.pdfGen.getBuffer((buffer)=>{
+      this.pdfObj = new Uint8Array(buffer);
+      this.pdfViewer.openDocument(this.pdfObj);
+      this.pdfViewer.firstPage();
+      let pdfContainer = document.getElementsByClassName(
+        'pdfViewerContainer')[0]
+      pdfContainer.scrollTop = 0;
+      pdfContainer.scrollLeft = 0;
+    })
   }
 
-
+  scrollToBeginning(){
+    let  pdfContainer  = document.getElementsByClassName(
+      'pdfViewerContainer')[0]
+    console.log(pdfContainer)
+    pdfContainer.scrollTop  =  0;
+    pdfContainer.scrollLeft  =  0;
+  }
 
   downloadPdf(){
     this.pdfGen.download();
   }
-  // openPdf(){
-  //   this.pdfGen.open({},window);
-  // }
 
   ionViewDidLoad(){
     console.log('ionViewDidLoad PreviewPage')

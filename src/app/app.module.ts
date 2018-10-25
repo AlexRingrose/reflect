@@ -12,6 +12,7 @@ import { PapersPage } from '../pages/papers/papers';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { SimplePdfViewerModule } from 'simple-pdf-viewer';
 import { ShareService } from '../services/share/share';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ShareService } from '../services/share/share';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    SimplePdfViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
