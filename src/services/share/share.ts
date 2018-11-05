@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ShareService {
-  cover;
-  papers;
+  coverPage;
+  paperPage;
   constructor() {
-    this.cover = 'blank';
-    this.papers = 'blank';
+    this.coverPage = 'blank';
+    this.paperPage = 'blank';
   }
 
-  setCover(cover){ this.cover = cover; }
-  getCover(){ return this.cover }
+  setCover(cover){ this.coverPage = cover; }
+  getCover(){ return this.coverPage }
 
-  setPapers(papers){ this.papers = papers }
-  getPapers(){ return this.papers }
+  setPapers(papers,courses){ this.paperPage = {papers,courses} }
+  getPapers(){ return this.paperPage }
 }
