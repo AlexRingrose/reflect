@@ -5,53 +5,48 @@ import { FormBuilder, FormGroup, FormControl }
 
 import { ShareService } from '../../services/share/share';
 
-declare module "*.json" {
-    const value: any;
-    export default value;
-}
-import * as data from '../../assets/import-data.json';
+declare function require ( url: string );
 
-@Component({
+@Component( {
   selector: 'page-papers',
   templateUrl: 'papers.html',
-})
+} )
 
-export class PapersPage{
+export class PapersPage {
   public courseList = [];
-  courseAry = (<any>data).courseAry;
+  courseAry = require( '../../assets/import-data.json' ).courseAry;
 
   papers_form: FormGroup;
   tempServ;
   selectedCourses;
 
-  constructor(public navCtrl: NavController,
+  constructor ( public navCtrl: NavController,
     public formBuilder: FormBuilder, public navParams: NavParams,
-    shareServ: ShareService)
-  {
+    shareServ: ShareService ) {
     this.courseList
-    for(let i=0;i<this.courseAry.length;i++){
-      this.courseList.push(this.courseAry[i])
-        // ,values:this.courseAry[i].substr(0,3)})
+    for ( let i = 0; i < this.courseAry.length; i++ ) {
+      this.courseList.push( this.courseAry[ i ] )
+      // ,values:this.courseAry[i].substr(0,3)})
     }
     this.tempServ = shareServ;
     this.selectedCourses = [];
   }
 
-  ionViewWillLoad(){
-    this.papers_form = this.formBuilder.group({
-      paper1: new FormControl('',),
-      paper2: new FormControl('',),
-      paper3: new FormControl('',),
-      paper4: new FormControl('',),
-      paper5: new FormControl('',),
-      paper6: new FormControl('',),
-      paper7: new FormControl('',),
-      paper8: new FormControl('',),
-    })
+  ionViewWillLoad () {
+    this.papers_form = this.formBuilder.group( {
+      paper1: new FormControl( '' ),
+      paper2: new FormControl( '' ),
+      paper3: new FormControl( '' ),
+      paper4: new FormControl( '' ),
+      paper5: new FormControl( '' ),
+      paper6: new FormControl( '' ),
+      paper7: new FormControl( '' ),
+      paper8: new FormControl( '' ),
+    } )
   }
 
-  onSubmit(values){
-    console.log(this.selectedCourses)
-    this.tempServ.setPapers(values,this.selectedCourses)
+  onSubmit ( values ) {
+    console.log( this.selectedCourses )
+    this.tempServ.setPapers( values, this.selectedCourses )
   }
 }
