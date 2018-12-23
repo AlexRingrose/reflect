@@ -34,6 +34,7 @@
     "ionicons": "3.0.0",
     "pdfmake": "^0.1.38",
     "rxjs": "5.5.11",
+    "simple-pdf-viewer": "^2.0.2",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
   },

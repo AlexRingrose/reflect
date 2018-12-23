@@ -10,8 +10,8 @@
 
 
 <ion-content padding>
-  <form class="form" [formGroup]="validations_form"
-    (ngSubmit)="onSubmit(validations_form.value)">
+  <form class="form" [formGroup]="cover_form"
+    (ngSubmit)="onSubmit(cover_form.value)">
     <!-- Name field -->
     <ion-item>
       <ion-label color="primary" stacked>Name</ion-label>
@@ -20,9 +20,9 @@
     <!-- Name vailidation -->
     <div class="validation-errors">
       <ng-container *ngFor="let validation of validation_messages.name">
-        <div class="error-message" *ngIf="validations_form.get('name').hasError(
-        validation.type) && (validations_form.get('name').dirty ||
-        validations_form.get('name').touched)">
+        <div class="error-message" *ngIf="cover_form.get('name').hasError(
+        validation.type) && (cover_form.get('name').dirty ||
+        cover_form.get('name').touched)">
           {{ validation.message }}
         </div>
       </ng-container>
@@ -63,10 +63,40 @@
       <ion-input type="text" formControlName="concentrations"></ion-input>
     </ion-item>
 
+    <!-- Email field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+
+    <!-- Address field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Address</ion-label>
+      <ion-input type="text" formControlName="address"></ion-input>
+    </ion-item>
+
+    <!-- Cell field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Cell number</ion-label>
+      <ion-input type="text" formControlName="cellNum"></ion-input>
+    </ion-item>
+
+    <!-- Alt number field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Alt number</ion-label>
+      <ion-input type="text" formControlName="altNum"></ion-input>
+    </ion-item>
+
+    <!-- Cell field -->
+    <ion-item>
+      <ion-label color="primary" stacked>Long term Address</ion-label>
+      <ion-input type="text" formControlName="longAddress"></ion-input>
+    </ion-item>
+
 
 
     <button ion-button full type="submit"
-    [disabled]="!validations_form.valid">Submit</button>
+    [disabled]="!cover_form.valid">Submit</button>
   </form>
 
 </ion-content>

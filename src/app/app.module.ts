@@ -6,11 +6,13 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CoverPage } from '../pages/cover/cover';
-import { PreviewPage } from '../pages/preview/preview'
+import { PreviewPage } from '../pages/preview/preview';
+import { PapersPage } from '../pages/papers/papers';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { SimplePdfViewerModule } from 'simple-pdf-viewer';
 import { ShareService } from '../services/share/share';
 
 @NgModule({
@@ -19,11 +21,13 @@ import { ShareService } from '../services/share/share';
     HomePage,
     ListPage,
     CoverPage,
-    PreviewPage
+    PreviewPage,
+    PapersPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    SimplePdfViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,7 +35,8 @@ import { ShareService } from '../services/share/share';
     HomePage,
     ListPage,
     CoverPage,
-    PreviewPage
+    PreviewPage,
+    PapersPage
   ],
   providers: [
     StatusBar,

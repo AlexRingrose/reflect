@@ -8,10 +8,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-img src={{this.pdfSrc}} width=200 height= 400></ion-img>
-  </ion-list>
+    <section>
+      <simple-pdf-viewer></simple-pdf-viewer>
+    </section>
   <button ion-button full (click)="downloadPdf()">Download PDF</button>
-  <button ion-button full (click)="openPdf()">Open PDF</button>
-
+  <!-- <button ion-button full (click)="openPdf()">Open PDF</button> -->
 </ion-content>
