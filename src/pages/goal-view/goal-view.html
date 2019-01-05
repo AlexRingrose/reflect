@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{selectedGoal.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <!-- Goal description -->
+  <ion-item>
+    {{data.description}}
+  </ion-item>
+  <!-- Guide for response -->
+  <ion-item>
+    {{data.guide}}
+  </ion-item>
+  <!-- Response box -->
+  <ion-item>
+    <ion-textarea [(ngModel)]='response' placeholder='Type or paste your response here...'>
+    </ion-textarea>
+  </ion-item>
+  <!-- Rating selection -->
+  <ion-list radio-group [(ngModel)]='rating'>
+    <ion-item>
+      <ion-label>4</ion-label>
+      <ion-radio value="4" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3</ion-label>
+      <ion-radio value="3"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>1</ion-label>
+      <ion-radio value="1"></ion-radio>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
