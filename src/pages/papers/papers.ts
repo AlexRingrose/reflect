@@ -5,8 +5,6 @@ import { FormBuilder, FormGroup, FormControl }
 
 import { ShareService } from '../../services/share/share';
 
-declare function require ( url: string );
-
 @Component( {
   selector: 'page-papers',
   templateUrl: 'papers.html',
@@ -14,8 +12,7 @@ declare function require ( url: string );
 
 export class PapersPage {
   public courseList = [];
-  courseAry = require( '../../assets/import-data.json' ).courseAry;
-
+  courseAry;
   papers_form: FormGroup;
   tempServ;
   selectedCourses;
@@ -23,7 +20,9 @@ export class PapersPage {
   constructor ( public navCtrl: NavController,
     public formBuilder: FormBuilder, public navParams: NavParams,
     shareServ: ShareService ) {
-    this.courseList
+
+    this.courseAry = shareServ.importData.courseAry;
+
     for ( let i = 0; i < this.courseAry.length; i++ ) {
       this.courseList.push( this.courseAry[ i ] )
       // ,values:this.courseAry[i].substr(0,3)})

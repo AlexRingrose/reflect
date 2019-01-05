@@ -1,22 +1,131 @@
 {
   "courseAry": [
-    "401 Historiography","499 Special Topics",
-    "497 Internship","494 Independent Study",
-    "491 Seminar","460 Modern France Francophone World",
-    "442 Crusades","440 Comparative Slavery Americas",
-    "435 Latin America Seminar","434 History and Multimedia",
-    "430 Native American Social History","420 Indian People Great Plains",
-    "415 20th C. America","410 Trans-Mississippi West",
-    "385 Brazil","380 Mexico",
+    "401 Historiography",
+    "499 Special Topics",
+    "497 Internship",
+    "494 Independent Study",
+    "491 Seminar",
+    "460 Modern France Francophone World",
+    "442 Crusades",
+    "440 Comparative Slavery Americas",
+    "435 Latin America Seminar",
+    "434 History and Multimedia",
+    "430 Native American Social History",
+    "420 Indian People Great Plains",
+    "415 20th C. America",
+    "410 Trans-Mississippi West",
+    "385 Brazil",
+    "380 Mexico",
     "365 Peoples and Cultures of Native North America",
-    "363 Atlantic History","352 Medieval and Early Modern Women",
-    "351 Mediterranean World","350 20th Century Europe",
-    "347 Making of Modern Europe","343 Medieval Church",
-    "342 Age of the Vikings","338 South Africa",
-    "337 Imperialism","336 African American",
-    "328 Tranformation of America","325 Sectionalism and Civil War",
-    "320 Early Republic","319 Colonial America","315 American Women",
-    "299 Special Topics","261 American Indian History",
-    "251 Public History","220 North Dakota","not listed"
-  ]
+    "363 Atlantic History",
+    "352 Medieval and Early Modern Women",
+    "351 Mediterranean World",
+    "350 20th Century Europe",
+    "347 Making of Modern Europe",
+    "343 Medieval Church",
+    "342 Age of the Vikings",
+    "338 South Africa",
+    "337 Imperialism",
+    "336 African American",
+    "328 Tranformation of America",
+    "325 Sectionalism and Civil War",
+    "320 Early Republic",
+    "319 Colonial America",
+    "315 American Women",
+    "299 Special Topics",
+    "261 American Indian History",
+    "251 Public History",
+    "220 North Dakota",
+    "not listed"
+  ],
+  "goalData": {
+    "1": {
+      "title": "Relating Historical Content",
+      "description": "Relate historical content for a variety of periods and places.",
+      "guide": "Which papers/projects offer evidence that you have achieved this goal? How does this evidence demonstrate your achievement of the goal? Do you believe you have achieved this goal more fully than is demonstrated by the included papers/ projects ? Explain.",
+      "rating": [
+        "Selected papers/projects draw no connections between historical events and/or periods.",
+        "Selected papers / projects draw few reasonable and appropriate connections between historical events and / or periods.",
+        "Selected papers/projects draw some reasonable and appropriate connections between historical events and/or periods.",
+        "Selected papers/projects clearly draw reasonable and appropriate connections between historical events and/or periods."
+      ]
+    },
+    "2": {
+      "title": "*title*",
+      "description": "Explain chronology, change, and continuity as they pertain to history.",
+      "guide": "NOT IMPLEMENTED",
+      "rating": [
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED"
+      ]
+    },
+    "3": {
+      "title": "*title*",
+      "description": "Assess and select relevant historical data from both primary and secondary sources",
+      "guide": "NOT IMPLEMENTED",
+      "rating": [
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED"
+      ]
+    },
+    "4": {
+      "title": "*title*",
+      "description": "NOT IMPLEMENTED",
+      "guide": "NOT IMPLEMENTED",
+      "rating": [
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED"
+      ]
+    },
+    "5": {
+      "title": "*title*",
+      "description": "NOT IMPLEMENTED",
+      "guide": "NOT IMPLEMENTED",
+      "rating": [
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED"
+      ]
+    },
+    "6": {
+      "title": "*title*",
+      "description": "NOT IMPLEMENTED",
+      "guide": "NOT IMPLEMENTED",
+      "rating": [
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED"
+      ]
+    },
+    "7": {
+      "title": "*title*",
+      "description": "NOT IMPLEMENTED",
+      "guide": "NOT IMPLEMENTED",
+      "rating": [
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED"
+      ]
+    },
+    "8": {
+      "title": "*title*",
+      "description": "NOT IMPLEMENTED",
+      "guide": "NOT IMPLEMENTED",
+      "rating": [
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED",
+        "NOT IMPLEMENTED"
+      ]
+    }
+  }
 }
