@@ -4,11 +4,15 @@ declare function require ( url: string );
 
 @Injectable()
 export class ShareService {
-  coverPage;
-  paperPage;
+  coverPage: {};
+  paperPage: {};
   importData;
   constructor () {
-    this.coverPage = 'blank';
+    this.coverPage = {
+      name: '', id: '', advisor: '', graduation: '',
+      degree: '', minor: '', concentractions: '', email: '',
+      address: '', cellNum: '', altNum: '', longAddress: ''
+    };
     this.paperPage = 'blank';
     this.importData = require( '../../assets/import-data.json' );
   }
