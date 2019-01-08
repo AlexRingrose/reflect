@@ -13,13 +13,8 @@ export class ShareService {
       degree: '', minor: '', concentractions: '', email: '',
       address: '', cellNum: '', altNum: '', longAddress: ''
     };
-    this.paperPage = 'blank';
+    this.paperPage = { courseList: [], paperList: [] };
+
     this.importData = require( '../../assets/import-data.json' );
   }
-
-  setCover ( cover ) { this.coverPage = cover; }
-  getCover () { return this.coverPage }
-
-  setPapers ( papers, courses ) { this.paperPage = { papers, courses } }
-  getPapers () { return this.paperPage }
 }

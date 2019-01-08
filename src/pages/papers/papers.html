@@ -8,114 +8,21 @@
 </ion-header>
 
 <ion-content padding>
-  <form class="form" [formGroup]="papers_form"
-    (ngSubmit)="onSubmit(papers_form.value)">
+  <ion-list>
+    <ion-item-group margin-bottom *ngFor='let number of paperNumber, let i = index'>
+      <ion-item-divider color="light">{{number}} Paper</ion-item-divider>
+      <ion-item>
+        <ion-input type="text" placeholder="Title of the paper..." [(ngModel)]='shareServ.paperPage.paperList[i]'></ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Course :</ion-label>
+        <ion-select [(ngModel)]="shareServ.paperPage.courseList[i]">
+          <ion-option *ngFor="let item of courseList">
+            {{item}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-item-group>
 
-    <ion-item>
-     <ion-label>Course 1</ion-label>
-      <ion-select [(ngModel)]="selectedCourses[0]"
-                  [ngModelOptions]="{standalone:true}">
-        <ion-option *ngFor="let item of courseList">
-          {{item}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Paper" formControlName="paper1"></ion-input>
-    </ion-item>
-
-    <ion-item>
-     <ion-label>Course 2</ion-label>
-      <ion-select [(ngModel)]="selectedCourses[1]"
-                  [ngModelOptions]="{standalone:true}">
-        <ion-option *ngFor="let item of courseList">
-          {{item}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Paper" formControlName="paper2"></ion-input>
-    </ion-item>
-
-    <ion-item>
-     <ion-label>Course 3</ion-label>
-      <ion-select [(ngModel)]="selectedCourses[2]"
-                  [ngModelOptions]="{standalone:true}">
-        <ion-option *ngFor="let item of courseList">
-          {{item}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Paper" formControlName="paper3"></ion-input>
-    </ion-item>
-
-    <ion-item>
-     <ion-label>Course 4</ion-label>
-      <ion-select [(ngModel)]="selectedCourses[3]"
-                  [ngModelOptions]="{standalone:true}">
-        <ion-option *ngFor="let item of courseList">
-          {{item}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Paper" formControlName="paper4"></ion-input>
-    </ion-item>
-
-    <ion-item>
-     <ion-label>Course 5</ion-label>
-      <ion-select [(ngModel)]="selectedCourses[4]"
-                  [ngModelOptions]="{standalone:true}">
-        <ion-option *ngFor="let item of courseList">
-          {{item}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Paper" formControlName="paper5"></ion-input>
-    </ion-item>
-
-    <ion-item>
-     <ion-label>Course 6</ion-label>
-      <ion-select [(ngModel)]="selectedCourses[5]"
-                  [ngModelOptions]="{standalone:true}">
-        <ion-option *ngFor="let item of courseList">
-          {{item}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Paper" formControlName="paper6"></ion-input>
-    </ion-item>
-
-    <ion-item>
-     <ion-label>Course 7</ion-label>
-      <ion-select [(ngModel)]="selectedCourses[6]"
-                  [ngModelOptions]="{standalone:true}">
-        <ion-option *ngFor="let item of courseList">
-          {{item}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Paper" formControlName="paper7"></ion-input>
-    </ion-item>
-
-    <ion-item>
-     <ion-label>Course 8</ion-label>
-      <ion-select [(ngModel)]="selectedCourses[7]"
-                  [ngModelOptions]="{standalone:true}">
-        <ion-option *ngFor="let item of courseList">
-          {{item}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Paper" formControlName="paper8"></ion-input>
-    </ion-item>
-
-    <button ion-button full type="submit"
-    [disabled]="!papers_form.valid">Submit</button>
-  </form>
+  </ion-list>
 </ion-content>
