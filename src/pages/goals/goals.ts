@@ -9,7 +9,7 @@ import { ShareService } from '../../services/share/share';
   templateUrl: 'goals.html',
 } )
 export class GoalsPage {
-  goals: Array<{ slug: string, title: string, data: {} }>;
+  goals: Array<{ num: number, slug: string, title: string, data: {} }>;
   goalCount: number;
   goalObj: any;
 
@@ -21,9 +21,10 @@ export class GoalsPage {
 
     this.goals = [];
 
-    this.goalCount = Object.keys( this.goalObj ).length + 1;
+    this.goalCount = shareServ.goalNumber;
     for ( let i = 1; i < this.goalCount; i++ ) {
       this.goals.push( {
+        num: i - 1,
         slug: `SLO ${ i }`,
         title: `${ this.goalObj[ i ].title }`,
         data: this.goalObj[ i ]
