@@ -8,6 +8,9 @@ import { ListPage } from '../pages/list/list';
 import { CoverPage } from '../pages/cover/cover';
 import { PreviewPage } from '../pages/preview/preview';
 import { PapersPage } from '../pages/papers/papers';
+import { GoalsPage } from '../pages/goals/goals';
+import { GoalViewPage } from '../pages/goal-view/goal-view';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,7 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SimplePdfViewerModule } from 'simple-pdf-viewer';
 import { ShareService } from '../services/share/share';
 
-@NgModule({
+@NgModule( {
   declarations: [
     MyApp,
     HomePage,
@@ -23,26 +26,30 @@ import { ShareService } from '../services/share/share';
     CoverPage,
     PreviewPage,
     PapersPage,
+    GoalsPage,
+    GoalViewPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot( MyApp ),
     SimplePdfViewerModule
   ],
-  bootstrap: [IonicApp],
+  bootstrap: [ IonicApp ],
   entryComponents: [
     MyApp,
     HomePage,
     ListPage,
     CoverPage,
     PreviewPage,
-    PapersPage
+    PapersPage,
+    GoalsPage,
+    GoalViewPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     ShareService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
-})
-export class AppModule {}
+} )
+export class AppModule { }
