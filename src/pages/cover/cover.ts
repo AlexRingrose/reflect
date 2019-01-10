@@ -4,6 +4,7 @@ import { Validators, FormBuilder, FormGroup, FormControl }
   from '@angular/forms';
 
 import { ShareService } from '../../services/share/share';
+import { StoreServiceProvider } from '../../services/store-service/store-service';
 
 @Component( {
   selector: 'page-cover',
@@ -12,14 +13,19 @@ import { ShareService } from '../../services/share/share';
 export class CoverPage {
   cover_form: FormGroup;
   shareServ;
-  constructor ( public navCtrl: NavController, public formBuilder: FormBuilder,
-    public navParams: NavParams, shareServ: ShareService ) {
-    this.shareServ = shareServ;
+  constructor ( public navCtrl: NavController,
+    public navParams: NavParams, public _share: ShareService,
+    public _store: StoreServiceProvider ) {
+    this.shareServ = _share;
   }
   //Add selector tool for these: advisor, graduation, degree
 
   onSubmit ( values ) {
     console.log( values )
     // this.shareServ.setCover(values)
+  }
+
+  ionViewDidLeave () {
+    this._store.saveData();
   }
 }

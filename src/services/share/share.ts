@@ -4,6 +4,7 @@ declare function require ( url: string );
 
 @Injectable()
 export class ShareService {
+  dataRetrieved;
   coverPage: {};
   paperPage: {};
   goalPage: Array<any>;
