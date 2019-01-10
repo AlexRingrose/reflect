@@ -13,8 +13,8 @@ export class GoalViewPage {
   rating;
   response;
   serv;
-  constructor ( public shareServ: ShareService, public navCtrl: NavController, public navParams: NavParams ) {
-    this.serv = shareServ;
+  constructor ( public _share: ShareService, public navCtrl: NavController, public navParams: NavParams ) {
+    this.serv = _share;
     this.selectedGoal = navParams.get( 'goal' );
     this.data = this.selectedGoal.data;
   }

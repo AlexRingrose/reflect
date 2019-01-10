@@ -9,7 +9,6 @@ import { CoverPage } from '../pages/cover/cover';
 import { PreviewPage } from '../pages/preview/preview';
 import { PapersPage } from '../pages/papers/papers';
 import { GoalsPage } from '../pages/goals/goals';
-import { StoreServiceProvider } from '../services/store-service/store-service';
 
 @Component( {
   templateUrl: 'app.html'
@@ -21,8 +20,7 @@ export class MyApp {
 
   pages: Array<{ title: string, component: any }>;
 
-  constructor ( public _store: StoreServiceProvider,
-    public platform: Platform, public statusBar: StatusBar,
+  constructor ( public platform: Platform, public statusBar: StatusBar,
     public splashScreen: SplashScreen ) {
     this.initializeApp();
     // used for an example of ngFor and navigation
@@ -43,7 +41,6 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this._store.loadData();
     } );
   }
 

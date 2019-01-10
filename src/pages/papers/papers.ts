@@ -18,16 +18,20 @@ export class PapersPage {
 
   constructor ( public navCtrl: NavController,
     public formBuilder: FormBuilder, public navParams: NavParams,
-    shareServ: ShareService ) {
+    public _share: ShareService ) {
     this.paperNumber = [ 'First', 'Second', 'Third', 'Fourth',
       'Fifth', 'Sixth', 'Seventh', 'Eighth' ];
-    this.shareServ = shareServ;
-    this.courseAry = shareServ.importData.courseAry;
+    this.shareServ = _share;
+    this.courseAry = _share.importData.courseAry;
 
     for ( let i = 0; i < this.courseAry.length; i++ ) {
       this.courseList.push( this.courseAry[ i ] )
     }
 
+  }
+
+  ionViewDidLeave () {
+    this._share.saveData();
   }
 
   onSubmit ( values ) {
