@@ -12,9 +12,7 @@ export class StoreServiceProvider {
   }
 
   loadData () {
-    this._storage.get( KEY ).then( res => {
-      this._share.dataRetrieved = res;
-    } )
+    return this._storage.get( KEY );
   }
 
   saveData () {
