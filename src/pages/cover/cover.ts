@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Validators, FormBuilder, FormGroup, FormControl }
-  from '@angular/forms';
 
 import { ShareService } from '../../services/share/share';
 import { StoreServiceProvider } from '../../services/store-service/store-service';
@@ -11,7 +9,6 @@ import { StoreServiceProvider } from '../../services/store-service/store-service
   templateUrl: 'cover.html',
 } )
 export class CoverPage {
-  cover_form: FormGroup;
   shareServ;
   constructor ( public navCtrl: NavController,
     public navParams: NavParams, public _share: ShareService,
