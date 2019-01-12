@@ -36,96 +36,122 @@
     "261 American Indian History",
     "251 Public History",
     "220 North Dakota",
-    "not listed ha"
+    "not listed"
   ],
   "goalData": {
     "1": {
-      "title": "Relating Historical Content",
+      "title": "Broad Historical Knowledge",
       "description": "Relate historical content for a variety of periods and places.",
-      "guide": "Which papers/projects offer evidence that you have achieved this goal? How does this evidence demonstrate your achievement of the goal? Do you believe you have achieved this goal more fully than is demonstrated by the included papers / projects? Explain.",
+      "guide": "Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain.",
       "rating": [
         "Coursework reflects the minimum geographic distribution: at least one EU, US, and NW course. Selected papers/projects are only from one geographic area and deal with similar historical topics.",
         "Coursework reflects the minimum geographic distribution: at least one EU, US, and NW course, with other coursework largely focused on one geographic area. Selected papers/projects are mainly from two geographic areas and deal with similar historical topics.",
-        " Coursework and portfolio reflects engagement with US, EU, and NW areas and selected papers/projects are distributed across two or more geographic areas and display several different historical topics.",
+        "Coursework and portfolio reflects engagement with US, EU, and NW areas and selected papers/projects are distributed across two or more geographic areas and display several different historical topics.",
         "Coursework and portfolio reflects engagement with US, EU, and NW areas and selected papers/projects are representative of US, EU, and NW areas and display a variety of historical topics."
       ]
     },
     "2": {
-      "title": "*title*",
+      "title": "Chronology and Change",
       "description": "Explain chronology, change, and continuity as they pertain to history.",
       "guide": [
-        "NOT IMPLEMENTED"
+        "Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain."
       ],
       "rating": [
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED"
+        "Selected papers/projects draw no connections between historical events and/or periods.",
+        "Selected papers/projects draw few reasonable and appropriate connections between historical events and/or periods.",
+        "Selected papers/projects draw some reasonable and appropriate connections between historical events and/or periods.",
+        "Selected papers/projects clearly draw reasonable and appropriate connections between historical events and/or periods."
       ]
     },
     "3": {
-      "title": "*title*",
-      "description": "Assess and select relevant historical data from both primary and secondary sources",
+      "title": "Assess and Cite Sources",
+      "description": "Assess and select relevant historical data from both primary and secondary sources, citing that data accurately using the Chicago/Turabian style guide.",
       "guide": [
-        "NOT IMPLEMENTED"
+        "Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain."
       ],
       "rating": [
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED"
+        "Papers/projects include one or two secondary sources. Secondary sources are encyclopedic or websites. No inclusion of primary sources.  Citations are absent or inaccurate.",
+        "Papers/projects include few primary and secondary sources, i.e, most of the information comes from three or fewer sources. Secondary sources are general in nature. Few primary sources are cited or included. Evidence is minimally cited and/or citations are incomplete or inaccurate.",
+        "Papers/projects include some secondary sources and some primary sources. Evidence includes some secondary sources such as historical monographs and research articles and some primary sources such as government documents, newspapers, diaries/memoirs, photographs, annals, chronicles, or literary works in translation. Citations are adequate and mostly accurate.",
+        "Papers/projects include and cite correctly many primary and secondary sources. Secondary sources include historical monographs and/or research articles. Primary sources such as government documents, newspapers, diaries/memoirs, photographs, annals, chronicles, or literary works in translation are in evidence.  Citations are abundant and accurate."
       ]
     },
     "4": {
-      "title": "*title*",
+      "title": "Research Historiography",
       "description": "Demonstrate the ability to become informed on historiographical issues through the use of history journals, books, and reviews.",
       "guide": [
-        "NOT IMPLEMENTED"
+        "Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain."
       ],
       "rating": [
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED"
+        "The paper incorporates fewer than two standard and current journals, books, and reviews in advancing a historiographical study.",
+        "The paper incorporates few standard and current journals, books, and reviews in advancing a historiographical study.",
+        "The paper incorporates some standard and current journals, books, and reviews in advancing a historiographical study.",
+        "The paper incorporates a variety of standard and current journals, books, and reviews in advancing a historiographical study."
       ]
     },
     "5": {
-      "title": "*title*",
+      "title": "Interpret Evidence",
       "description": "Analyze and interpret primary and secondary sources in the service of historical analysis.",
       "guide": [
-        "NOT IMPLEMENTED"
+        "Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain."
       ],
       "rating": [
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED"
+        "Papers/projects analyze and interpret one or two secondary sources to advance a simple argument. Secondary sources are encyclopedic or websites. No use of primary sources.",
+        "Papers/projects analyze and interpret few primary and secondary sources to advance a basic argument, i.e, most of the information comes from three or fewer sources. Secondary sources are general in nature. Few primary sources are cited or used.",
+        "Papers/projects analyze and interpret some secondary sources and some primary sources to advance a complex argument. Some secondary sources such as historical monographs and research articles are used. Some primary sources such as government documents, newspapers, diaries/memoirs, photographs, annals, chronicles, or literary works in translation are in evidence.",
+        "Papers/projects analyze and interpret a number of primary and secondary sources to advance a sophisticated argument. Secondary sources such as historical monographs and research articles are used. Primary sources such as government documents, newspapers, diaries/memoirs, photographs, annals, chronicles, or literary works in translation are in evidence."
       ]
     },
     "6": {
-      "title": "*title*",
+      "title": "Multiple Perspectives",
       "description": "Employ perspectives such as globalism, multiculturalism, gender, or ethnicity to perform historical analysis.",
       "guide": [
-        "NOT IMPLEMENTED"
+        "Selected papers/projects should cover at least two perspectives. Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain."
       ],
       "rating": [
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED"
+        "The selected papers/projects do not incorporate such perspectives as globalism, multiculturalism, gender, or ethnicity to analyze a historical problem.",
+        "The selected papers/projects minimally incorporate perspectives such as globalism, multiculturalism, gender, or ethnicity, but they are not used to analyze a historical problem.",
+        "The selected papers/projects incorporate perspectives such as globalism, multiculturalism, gender or ethnicity to analyze a historical problem.",
+        "The selected papers/projects thoroughly incorporate perspectives such as globalism, multiculturalism, gender, or ethnicity to analyze a historical problem and advance an argument."
       ]
     },
     "7": {
-      "title": "*title*",
+      "title": "Analysis and Argument",
       "description": "Demonstrate advanced critical and analytical thinking and writing skills, including the ability to present and support an argumentative thesis.",
       "guide": [
-        "NOT IMPLEMENTED"
+        "Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain."
       ],
       "rating": [
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED",
-        "NOT IMPLEMENTED"
+        "The selected paper/product contains neither an argumentative thesis nor analysis based on evidence.",
+        "The selected paper/product contains an implied argumentative thesis and some analysis based on evidence.",
+        "The selected paper/product contains an argumentative thesis explained over two or more sentences and analysis based on evidence.",
+        "The selected paper/product contains a clear argumentative thesis (one sentence) and sophisticated analysis based on evidence."
+      ]
+    },
+    "8": {
+      "title": "ND History",
+      "description": "Demonstrate knowledge of North Dakota history.",
+      "guide": [
+        "Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain."
+      ],
+      "rating": [
+        "The selected paper/product evidences little understanding of North Dakota history.",
+        "The selected paper/product analyzes some aspect of North Dakota history in a limited fashion.",
+        "The selected paper/product analyzes some aspect of North Dakota history in a solid fashion.",
+        "The selected paper/product analyzes some aspect of North Dakota history in a sophisticated fashion."
+      ]
+    },
+    "9": {
+      "title": "Controversy and History",
+      "description": "Explain the relationship of the past to the present, especially when addressing controversial issues. ",
+      "guide": [
+        "Which papers/projects offer evidence of your mastery this outcome? How does this evidence demonstrate this outcome? Do you believe you have achieved this outcome more fully than the selected papers demosntrate? Explain."
+      ],
+      "rating": [
+        "The selected paper/product provides little historical context for a controversial issue.",
+        "The selected paper/product provides a limited analysis of a controversial issue and its historical context. Relations between the past and the present are not fully drawn out.",
+        "The selected paper/product shows some analysis of a controversial issue and its historical context, showing some ways how the past and present interact.",
+        "The selected paper/product analyzes a controversial issue in historical context, showing how the past and present interact."
       ]
     }
   }
