@@ -34,10 +34,8 @@ export class ShareService {
       console.log( this.coverPage )
       if ( res !== null ) {
         this.coverPage = res.coverPage;
-        console.log( res.coverPage )
-        console.log( this.coverPage )
         this.paperPage = res.paperPage;
-        this.goalPage = res.paperPage;
+        this.goalPage = res.goalPage;
       }
 
     } );
