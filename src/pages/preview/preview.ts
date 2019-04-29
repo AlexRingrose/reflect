@@ -49,88 +49,103 @@ export class PreviewPage {
   }
 
   createPdf () {
+    let pdfContent = [
+      { text: 'History Portfolio', fontSize: 18, bold: true },
+      { text: 'Cover Page', style: 'sectionHeader' },
+      {
+        text: [
+          { text: 'Name : ', style: 'itemName' },
+          { text: this.coverData.name, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'ID : ', style: 'itemName' },
+          { text: this.coverData.id, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Advisor : ', style: 'itemName' },
+          { text: this.coverData.advisor, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Graduation : ', style: 'itemName' },
+          { text: this.coverData.graduation, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Degree : ', style: 'itemName' },
+          { text: this.coverData.degree, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Minor : ', style: 'itemName' },
+          { text: this.coverData.minor, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Concentration(s) : ', style: 'itemName' },
+          { text: this.coverData.concentrations, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Email : ', style: 'itemName' },
+          { text: this.coverData.email, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Address : ', style: 'itemName' },
+          { text: this.coverData.address, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Cell Number : ', style: 'itemName' },
+          { text: this.coverData.cellNum, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Alt Number : ', style: 'itemName' },
+          { text: this.coverData.altNum, style: 'body' }
+        ]
+      },
+      {
+        text: [
+          { text: 'Long Term Address : ', style: 'itemName' },
+          { text: this.coverData.longAddress, style: 'body' }
+        ]
+      },
+      { text: 'Paper Page', style: 'sectionHeader' },
+    ]
+
+    for ( let i = 0; i < this.paperData.paperList.length; i++ ) {
+      pdfContent.push( {
+        text: [
+          { text: ' - ', style: 'subHeader' },
+          { text: ' Title: ' + this.paperData.paperList[ i ], style: 'body' }, { text: ' Course: ' + this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ), style: 'body' }
+        ]
+      } );
+    }
+
+
     let docDefinition = {
-      content: [
-        { text: 'History Portfolio', fontSize: 18, bold: true },
-        { text: 'Cover Page', style: 'sectionHeader' },
-        {
-          text: [
-            { text: 'Name : ', style: 'itemName' },
-            { text: this.coverData.name, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'ID : ', style: 'itemName' },
-            { text: this.coverData.id, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Advisor : ', style: 'itemName' },
-            { text: this.coverData.advisor, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Graduation : ', style: 'itemName' },
-            { text: this.coverData.graduation, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Degree : ', style: 'itemName' },
-            { text: this.coverData.degree, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Minor : ', style: 'itemName' },
-            { text: this.coverData.minor, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Concentration(s) : ', style: 'itemName' },
-            { text: this.coverData.concentrations, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Email : ', style: 'itemName' },
-            { text: this.coverData.email, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Address : ', style: 'itemName' },
-            { text: this.coverData.address, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Cell Number : ', style: 'itemName' },
-            { text: this.coverData.cellNum, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Alt Number : ', style: 'itemName' },
-            { text: this.coverData.altNum, style: 'body' }
-          ]
-        },
-        {
-          text: [
-            { text: 'Long Term Address : ', style: 'itemName' },
-            { text: this.coverData.longAddress, style: 'body' }
-          ]
-        },
-
-
-      ],
+      content: pdfContent,
       styles: {
         sectionHeader: {
           fontSize: 16,
+          bold: true,
+        },
+        subHeader: {
+          fontSize: 14,
           bold: true,
         },
         itemName: {
