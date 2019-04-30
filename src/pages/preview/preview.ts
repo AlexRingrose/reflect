@@ -131,10 +131,15 @@ export class PreviewPage {
       pdfContent.push( {
         text: [
           { text: ' - ', style: 'subHeader' },
-          { text: ' Title: ' + this.paperData.paperList[ i ], style: 'body' }, { text: ' Course: ' + this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ), style: 'body' }
+          { text: ' Title: ' + this.paperData.paperList[ i ] + '\n', style: 'body' },
+          { text: ' - ', style: 'subHeader' },
+          { text: ' Course: ' + this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ), style: 'body' },
+          { text: '\n\n', style: 'subHeader'}
         ]
       } );
     }
+
+
 
 
     let docDefinition = {
