@@ -139,7 +139,20 @@ export class PreviewPage {
       } );
     }
 
+    pdfContent.push( {
+      text: 'Goal Page', style: 'sectionHeader'
+    } );
 
+    for ( let i = 0; i < this.goalData.length; i++){
+      pdfContent.push( {
+        text: [
+          { text: 'SLO ' + (i+1) + ' : ', style: 'subHeader'},
+          { text: this.goalData[ i ].rating, style: 'body' },
+          { text: '\n', style: 'body' },
+          { text: this.goalData[i].response, style: 'body'}
+        ]
+      })
+    };
 
 
     let docDefinition = {
