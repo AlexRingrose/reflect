@@ -10,18 +10,25 @@ import { ShareService } from '../../services/share/share';
 export class GoalViewPage {
   selectedGoal: any;
   data: {};
+  goalNum;
   rating;
   response;
   serv;
-  constructor ( public shareServ: ShareService, public navCtrl: NavController, public navParams: NavParams ) {
-    this.serv = shareServ;
+  constructor ( public _share: ShareService, public navCtrl: NavController, public navParams: NavParams ) {
     this.selectedGoal = navParams.get( 'goal' );
     this.data = this.selectedGoal.data;
+    this.goalNum = this.selectedGoal.num;
   }
 
-  ionViewDidLoad () {
-    console.log( this.selectedGoal.data )
+  ionViewWillLoad () {
+    console.log( this.selectedGoal )
+    console.log( this._share.goalPage );
+    console.log( this._share.paperPage )
     console.log( 'ionViewDidLoad GoalViewPage' );
+  }
+
+  ionViewDidLeave () {
+    this._share.saveData();
   }
 
 }

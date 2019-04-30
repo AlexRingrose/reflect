@@ -12,14 +12,18 @@ import { ShareService } from '../../services/share/share';
 export class CoverPage {
   cover_form: FormGroup;
   shareServ;
-  constructor ( public navCtrl: NavController, public formBuilder: FormBuilder,
-    public navParams: NavParams, shareServ: ShareService ) {
-    this.shareServ = shareServ;
+  constructor ( public navCtrl: NavController,
+    public navParams: NavParams, public _share: ShareService ) {
+    this.shareServ = _share;
   }
   //Add selector tool for these: advisor, graduation, degree
 
   onSubmit ( values ) {
     console.log( values )
     // this.shareServ.setCover(values)
+  }
+
+  ionViewDidLeave () {
+    this._share.saveData();
   }
 }

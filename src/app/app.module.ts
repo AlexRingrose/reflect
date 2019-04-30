@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -17,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { SimplePdfViewerModule } from 'simple-pdf-viewer';
 import { ShareService } from '../services/share/share';
+import { StoreServiceProvider } from '../services/store-service/store-service';
 
 @NgModule( {
   declarations: [
@@ -32,7 +34,8 @@ import { ShareService } from '../services/share/share';
   imports: [
     BrowserModule,
     IonicModule.forRoot( MyApp ),
-    SimplePdfViewerModule
+    SimplePdfViewerModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [ IonicApp ],
   entryComponents: [
@@ -49,7 +52,8 @@ import { ShareService } from '../services/share/share';
     StatusBar,
     SplashScreen,
     ShareService,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    StoreServiceProvider
   ]
 } )
 export class AppModule { }
