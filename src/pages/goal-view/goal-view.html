@@ -27,19 +27,19 @@
     <ion-list radio-group [(ngModel)]='_share.goalPage[goalNum].rating'>
       <!-- <ion-list radio-group [(ngModel)]='_share.goalPage[selectedGoal.num].rating'> -->
       <ion-item>
-        <ion-label text-wrap>{{data.rating[3]}}</ion-label>
+        <ion-label class='scoretext' text-wrap>4 - {{data.rating[3]}}</ion-label>
         <ion-radio value="4" checked></ion-radio>
       </ion-item>
       <ion-item>
-        <ion-label>3 - {{data.rating[2]}}</ion-label>
+        <ion-label class='scoretext' text-wrap>3 - {{data.rating[2]}}</ion-label>
         <ion-radio value="3"></ion-radio>
       </ion-item>
       <ion-item>
-        <ion-label>2 - {{data.rating[1]}}</ion-label>
+        <ion-label class='scoretext' text-wrap>2 - {{data.rating[1]}}</ion-label>
         <ion-radio value="2"></ion-radio>
       </ion-item>
       <ion-item>
-        <ion-label>1 - {{data.rating[0]}}</ion-label>
+        <ion-label class='scoretext' text-wrap>1 - {{data.rating[0]}}</ion-label>
         <ion-radio value="1"></ion-radio>
       </ion-item>
 
