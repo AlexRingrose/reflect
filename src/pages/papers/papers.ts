@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { FormBuilder, FormGroup, FormControl }
-  from '@angular/forms';
-
 import { ShareService } from '../../services/share/share';
 
 @Component( {
@@ -16,8 +13,7 @@ export class PapersPage {
   shareServ;
   paperNumber = [];
 
-  constructor ( public navCtrl: NavController,
-    public formBuilder: FormBuilder, public navParams: NavParams,
+  constructor ( public navCtrl: NavController, public navParams: NavParams,
     public _share: ShareService ) {
     this.paperNumber = [ 'First', 'Second', 'Third', 'Fourth',
       'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth' ];
