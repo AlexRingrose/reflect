@@ -21,10 +21,9 @@ export class GoalsPage {
 
     this.goals = [];
 
-    this.goalCount = shareServ.goalNumber;
-    for ( let i = 1; i < this.goalCount; i++ ) {
+    for ( let i = 1; i < shareServ.goalNumber + 1; i++ ) {
       this.goals.push( {
-        num: i - 1,
+        num: i,
         slug: `SLO ${ i }`,
         title: `${ this.goalObj[ i ].title }`,
         data: this.goalObj[ i ]

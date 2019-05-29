@@ -143,10 +143,10 @@ export class PreviewPage {
       text: 'Goal Page', style: 'sectionHeader'
     } );
 
-    for ( let i = 0; i < this.goalData.length; i++){
+    for ( let i = 1; i < this.goalData.length; i++){
       pdfContent.push( {
         text: [
-          { text: 'SLO ' + (i+1) + ' : ', style: 'subHeader'},
+          { text: 'SLO ' + (i) + ' : ', style: 'subHeader'},
           { text: this.goalData[ i ].rating, style: 'body' },
           { text: '\n', style: 'body' },
           { text: this.goalData[i].response, style: 'body'}
@@ -197,13 +197,6 @@ export class PreviewPage {
 
   downloadPdf () {
     this.pdfGen.download();
-  }
-
-  ionViewDidLoad () {
-    console.log( 'ionViewDidLoad PreviewPage' )
-    console.log( this.coverData );
-    console.log( this.paperData );
-    console.log( this.goalData );
   }
 
 }
