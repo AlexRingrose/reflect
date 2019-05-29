@@ -20,7 +20,7 @@ export class PapersPage {
     public formBuilder: FormBuilder, public navParams: NavParams,
     public _share: ShareService ) {
     this.paperNumber = [ 'First', 'Second', 'Third', 'Fourth',
-      'Fifth', 'Sixth', 'Seventh', 'Eighth' ];
+      'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth' ];
     this.shareServ = _share;
     this.courseAry = _share.importData.courseAry;
 

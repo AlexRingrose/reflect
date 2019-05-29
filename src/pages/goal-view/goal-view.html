@@ -20,12 +20,9 @@
     <ion-item>
       <ion-textarea rows="8" class='response' [(ngModel)]='_share.goalPage[goalNum].response' placeholder='Type or paste your response here...'>
       </ion-textarea>
-      <!-- <ion-textarea rows="8" class='response' [(ngModel)]='_share.goalPage[selectedGoal.num].response' placeholder='Type or paste your response here...'>
-      </ion-textarea> -->
     </ion-item>
     <!-- Rating selection -->
     <ion-list radio-group [(ngModel)]='_share.goalPage[goalNum].rating'>
-      <!-- <ion-list radio-group [(ngModel)]='_share.goalPage[selectedGoal.num].rating'> -->
       <ion-item>
         <ion-label class='scoretext' text-wrap>4 - {{data.rating[3]}}</ion-label>
         <ion-radio value="4" checked></ion-radio>
