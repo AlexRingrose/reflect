@@ -3,14 +3,25 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <section class='headerFormat'>
     <ion-title>Preview</ion-title>
+    <ion-buttons>
+        <button ion-button icon-only (click)="backPage()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="nextPage()">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="downloadPdf()">
+            <ion-icon name="download"></ion-icon>
+        </button>
+      </ion-buttons>
+    </section>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <section>
-      <simple-pdf-viewer></simple-pdf-viewer>
-    </section>
-  <button ion-button full (click)="downloadPdf()">Download PDF</button>
-  <!-- <button ion-button full (click)="openPdf()">Open PDF</button> -->
+  <section>
+    <simple-pdf-viewer></simple-pdf-viewer>
+  </section>
 </ion-content>

@@ -49,6 +49,16 @@ export class PreviewPage {
   }
 
   createPdf () {
+    let papersCol1 = '', papersCol2 = '';
+
+    for ( let i = 0; i < this.paperData.paperList.length; i++ ) {
+      if(i < Math.ceil(this.paperData.paperList.length / 2)){
+        papersCol1 += 'Title: ' + this.paperData.paperList[ i ] + '\n' + 'Course: ' + this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ) + '\n\n'
+      }else{
+        papersCol2 += 'Title: ' + this.paperData.paperList[ i ] + '\n' + 'Course: ' + this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ) + '\n\n'
+      }
+    }
+
     let pdfContent = [
       { text: 'History Portfolio', fontSize: 22, bold: true },
       { text: '\nStudent Information', style: 'sectionHeader' },
@@ -117,32 +127,31 @@ export class PreviewPage {
         text: [
           { text: '\nPapers', style: 'sectionHeader' }
         ],
+      },
+      {
+        columns: [
+          {
+            text: papersCol1
+          },
+          {
+            text: papersCol2
+          }
+        ]
       }
     ]
 
-    for ( let i = 0; i < this.paperData.paperList.length; i++ ) {
-      pdfContent.push( {
-        text: [
-          { text: ' - ', style: 'subHeader' },
-          { text: ' Title: ' + this.paperData.paperList[ i ] + '\n', style: 'body' },
-          { text: ' - ', style: 'subHeader' },
-          { text: ' Course: ' + this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ), style: 'body' },
-          { text: '\n\n', style: 'subHeader'}
-        ]
-      } );
-    }
 
     pdfContent.push( {
-      text: 'Goal Page', style: 'sectionHeader'
+      text: 'Student Learning Objectives', style: 'sectionHeader'
     } );
 
     for ( let i = 1; i < this.goalData.length; i++){
       pdfContent.push( {
         text: [
-          { text: 'SLO ' + (i) + ' : ', style: 'subHeader'},
-          { text: this.goalData[ i ].rating, style: 'body' },
+          { text: 'SLO ' + (i) + ' : ', style: 'itemName'},
+          { text: '\t' + this.goalData[ i ].rating, style: 'score' },
           { text: '\n', style: 'body' },
-          { text: this.goalData[i].response, style: 'body'}
+          { text: this.goalData[i].response + '\n\n', style: 'body'}
         ]
       })
     };
@@ -165,6 +174,10 @@ export class PreviewPage {
         },
         body: {
           fontSize: 12,
+        },
+        score:{
+          fontSize: 14,
+          bold: true
         }
       }
     }
@@ -178,6 +191,13 @@ export class PreviewPage {
       pdfContainer.scrollTop = 0;
       pdfContainer.scrollLeft = 0;
     } )
+  }
+
+  nextPage(){
+    this.pdfViewer.nextPage()
+  }
+  backPage(){
+    this.pdfViewer.prevPage()
   }
 
   scrollToBeginning () {
