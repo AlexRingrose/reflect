@@ -53,9 +53,9 @@ export class PreviewPage {
 
     for ( let i = 0; i < this.paperData.paperList.length; i++ ) {
       if(i < Math.ceil(this.paperData.paperList.length / 2)){
-        papersCol1 += 'Title: ' + this.paperData.paperList[ i ] + '\n' + 'Course: ' + this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ) + '\n\n'
+        papersCol1 += this.paperData.paperList[ i ] + '\n'+ this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ) + '\n\n'
       }else{
-        papersCol2 += 'Title: ' + this.paperData.paperList[ i ] + '\n' + 'Course: ' + this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ) + '\n\n'
+        papersCol2 += this.paperData.paperList[ i ] + '\n'+ this.paperData.courseList[ i ].replace( /(\r|\n)/gm, '' ).replace( /\s{2,}/g, '' ) + '\n\n'
       }
     }
 
@@ -65,7 +65,7 @@ export class PreviewPage {
       {
         style: 'tableExample',
         table: {
-          widths: ['25%','35%'],
+          widths: ['25%','55%'],
           body: [
             [
               { text: '', style: 'itemName' },
