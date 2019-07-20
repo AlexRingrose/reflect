@@ -28,7 +28,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Cover', component: CoverPage },
       { title: 'Papers', component: PapersPage },
-      { title: 'Goals', component: GoalsPage },
+      { title: 'SLOs', component: GoalsPage },
       { title: 'Preview', component: PreviewPage }
 
     ];
