@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { GoalViewPage } from '../goal-view/goal-view';
 import { ShareService } from '../../services/share/share';
 
-@IonicPage()
 @Component( {
   selector: 'page-goals',
   templateUrl: 'goals.html',
