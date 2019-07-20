@@ -34,3 +34,6 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 yarn.lock
+firebase.json
+.firebaserc
+.firebase/hosting.d3d3.cache
