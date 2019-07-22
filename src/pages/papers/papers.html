@@ -15,8 +15,8 @@
         <ion-input type="text" placeholder="Title of the paper..." [(ngModel)]='shareServ.paperPage.paperList[i]'></ion-input>
       </ion-item>
       <ion-item no-lines>
-        <ion-label>Course :</ion-label>
-        <ion-select [(ngModel)]="shareServ.paperPage.courseList[i]">
+        <!-- <ion-label>Course :</ion-label> -->
+        <ion-select [(ngModel)]="shareServ.paperPage.courseList[i]" placeholder="Course">
           <ion-option *ngFor="let item of courseList">
             {{item}}
           </ion-option>
