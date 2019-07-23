@@ -15,8 +15,10 @@ export class CoverPage {
   }
   //Add selector tool for these: advisor, graduation, degree
 
-  ngAfterViewChecked () {
-    this.defaultFocus.setFocus();
+  ionViewDidLoad () {
+    setTimeout( () => {
+      this.defaultFocus.setFocus();
+    }, 100 );
   }
 
   ionViewDidLeave () {
